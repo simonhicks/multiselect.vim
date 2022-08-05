@@ -20,3 +20,13 @@ Supported callback functions are:
 * `'onunchecked'`: this is called on each unchecked item
 * `'onnewunchecked'`: this is called on each newly checked item, but not on items that were already
   checked before the current save.
+
+You can call this function like this:
+
+```{.vimscript}
+function! Hello(item)
+  echom "Hello ".a:item."!"
+endfunction
+
+call multiselect#open(['foo', 'bar', 'baz'], {'onchecked': 'Hello'})
+```
