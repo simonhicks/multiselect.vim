@@ -28,7 +28,7 @@ function! Hello(item)
   echom "Hello ".a:item."!"
 endfunction
 
-call multiselect#open(['foo', 'bar', 'baz'], {'onchecked': 'Hello'})
+call multiselect#open(['foo', 'bar', 'baz'], {'onchecked': 'Hello', 'name': 'hello-select'})
 ```
 
 That will open a buffer that looks like this...
