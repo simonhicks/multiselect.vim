@@ -30,3 +30,13 @@ endfunction
 
 call multiselect#open(['foo', 'bar', 'baz'], {'onchecked': 'Hello'})
 ```
+
+That will open a buffer that looks like this...
+
+```
+[ ] foo
+[ ] bar
+[ ] baz
+```
+
+... and then when you write that buffer, any items that are checked using `X` will be passed to the callback function.
